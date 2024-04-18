@@ -8,11 +8,11 @@ description: Dive into Fleek's decentralized storage service. Offering support f
 category: Documentation
 keywords: [services, documentation, getting started]
 tags:
-  - Edge Platform
-  - CDN
-  - Guide
-  - Learn
-  - Fleek
+    - Edge Platform
+    - CDN
+    - Guide
+    - Learn
+    - Fleek
 ---
 
 ![](../images/storage-ui.png)
@@ -21,13 +21,25 @@ tags:
 
 In Fleek we offer a storage service that you can use to store your files in a decentralized way. We support the following protocols:
 
-- IPFS
-- Arweave
-- Filecoin
+-   IPFS
+-   Arweave
+-   Filecoin
 
 To guarantee the best performance and availability we use a combination of these protocols. We use IPFS as the main storage protocol and we use Arweave and Filecoin as a backup layer. This allows us to provide a high availability and performance service. By default we are using Filecoin as the backup layer but all the configuration can be changed in the storage settings.
 
 Storage is a service unique for every project. This means that you can have different storage configurations for each project you have in Fleek.
+
+#### IPFS (InterPlanetary File System):
+
+Fleek utilizes IPFS as its primary storage protocol, enabling decentralized storage and sharing of data through unique content addressing. IPFS offers robust peer-to-peer storage and retrieval, making it ideal for decentralized applications (dApps) and content distribution. By leveraging IPFS, Fleek ensures reliable and efficient storage for its users' files while promoting decentralization and data accessibility.
+
+#### Filecoin:
+
+As a backup layer, Fleek integrates Filecoin's decentralized storage capability, leveraging its ability to store and retrieve data in a secure and decentralized manner. Filecoin's Proof of Replication (PoRep) and Proof of Spacetime (PoSt) mechanisms ensure the integrity and ongoing storage of users' data, providing added assurance and trustworthiness to Fleek's storage service.
+
+#### Arweave:
+
+Fleek incorporates Arweave as another backup layer, leveraging its decentralized storage platform known for its permanent and tamper-proof storage solutions. Arweave's blockweave structure ensures the long-term availability and immutability of stored data, making it suitable for archival purposes. By integrating Arweave into its storage service, Fleek enhances data resilience and security, catering to users' needs for durable and immutable storage solutions.
 
 ### Add a File or Directory
 
@@ -57,6 +69,6 @@ To delete a file or directory you can click on the three dots icon in the file o
 
 In Fleek, all files in storage are made content-addressable by using IPFS as the addressability layer, which means all files stored on Fleek are stored on IPFS by default aside from the decentralized-storage layer of choice (Filecoin/Arweave). Each file will receive its unique immutable IPFS content hash to make it addressable under a common denominator/format that is standard in web3.
 
-- IPFS hashes look like: `QmX4XRaPP6jBSDiYr3tK7fEBWSA5QURS8WZ87ZvPRJgAqK`
+-   IPFS hashes look like: `QmX4XRaPP6jBSDiYr3tK7fEBWSA5QURS8WZ87ZvPRJgAqK`
 
 And they can be accessed via either Fleek's gateways, or a public gateways such as `ipfs.io/ipfs/<yourhash>`. While immutable, you can use IPNS to map dynamically changing IPFS hashes to a static hash/record (IPNS). See our CLI/SDK section for instructions on how to manage IPNS records.
